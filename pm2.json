@@ -1,0 +1,7 @@
+{
+    "apps": [{
+        "name": "tagspace-bot",
+        "script": "./index.js",
+        "watch": false
+    }]
+}

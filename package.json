@@ -1,0 +1,14 @@
+{
+    "name": "30seconds",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "pm2 start pm2.json"
+    },
+    "dependencies": {
+        "eris": "^0.8.6",
+        "fuzzy": "^0.1.3",
+        "lodash": "^4.17.10",
+        "minimist": "^1.2.0",
+        "vm2": "^3.6.2"
+    }
+}
