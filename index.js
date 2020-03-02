@@ -64,7 +64,7 @@ const _util = {
 	tagsPerPage: 50
 }
 
-const _code = `\`\`\``;
+const _code = `\`\`\``; //`
 
 class Space {
 	/**
@@ -481,7 +481,7 @@ let userData = new Map();
 client.registerCommand('eval', async (msg, args) => {
 	try {
 		let start = msg.createdAt;
-		let ev = eval(args.join(' '));
+		let ev = eval(args.join(" "));
 		let end = Date.now();
 		if (ev instanceof Promise) await ev;
 		if (typeof ev !== 'string')
@@ -804,7 +804,7 @@ tagCommand.registerSubcommand('create', (msg, args) => {
 		return `${_util["404"]} | (Space).`;
 	let space = spaces.get(_space);
 	if ((space.private || space.limited) &&
-		!(space.isContributor(id) ||
+		!(space.isContributor(msg.author.id) ||
 			space.author.id === msg.author.id ||
 			_util.isAdmin(msg.author.id)))
 		return `${_util["403"]} (Permissions)`;
